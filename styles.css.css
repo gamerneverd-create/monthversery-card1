@@ -1,0 +1,141 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* White text for contrast */
+    background-color: #1a001a; /* Very dark purple/maroon base */
+    /* Romantic starry/dark sky background effect */
+    background-image: radial-gradient(circle at top right, rgba(255, 0, 100, 0.2) 0%, transparent 50%),
+                      radial-gradient(circle at bottom left, rgba(100, 0, 255, 0.2) 0%, transparent 50%),
+                      linear-gradient(to bottom, #100010, #300030);
+    text-align: center;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- Header & Hero Section --- */
+.hero-section {
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+    padding: 100px 20px;
+    border-bottom: 5px solid #ff1493; /* Deep Pink accent line */
+    animation: fadeIn 2s ease-out;
+}
+
+.hero-section h1 {
+    font-size: 3.5em;
+    color: #ffb6c1; /* Light Pink/Heart color */
+    margin-bottom: 10px;
+}
+
+.hero-section h2 {
+    font-size: 2em;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* --- Photo Section --- */
+.photo-section {
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.05); /* Very light background for the image area */
+}
+
+.photo-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 0 30px rgba(255, 10, 100, 0.5); /* Glowing pink shadow */
+    transition: transform 0.3s ease;
+}
+
+.photo-section img:hover {
+    transform: scale(1.02);
+}
+
+.caption {
+    margin-top: 20px;
+    font-style: italic;
+    color: #ffb6c1;
+    font-size: 1.2em;
+}
+
+/* --- Content Sections --- */
+.content-section {
+    padding: 60px 10%;
+    margin: 40px 0;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.content-section h3 {
+    color: #ff1493; /* Deep Pink for headings */
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    border-bottom: 2px solid rgba(255, 20, 147, 0.5);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.poem p {
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 2;
+    padding: 0 5%;
+}
+
+/* --- YouTube Embed --- */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 182, 193, 0.3);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #0d000d;
+    padding: 20px;
+    border-top: 3px solid #ff1493;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+/* --- Animation for initial load --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Media Query for smaller screens --- */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+    .hero-section h2 {
+        font-size: 1.5em;
+    }
+    .poem p {
+        font-size: 1.2em;
+    }
+    .content-section {
+        padding: 40px 5%;
+    }
+}
